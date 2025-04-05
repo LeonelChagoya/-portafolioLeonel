@@ -1,7 +1,7 @@
 import { Skill } from '../core/Skill.js';
 
 export async function getSkillsFromJson() {
-    const basePath = window.location.pathname.includes('/-portafolioLeonel/')
+    const basePath = window.location.pathname.includes('https://leonelchagoya.github.io')
         ? '/-portafolioLeonel/'
         : '/';
 
