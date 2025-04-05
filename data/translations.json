@@ -8,7 +8,9 @@
     "contactTitle": "Contacto",
     "contactEmail": "Correo",
     "github": "GitHub",
-    "subtitle": "Desarrollador de software"
+    "subtitle": "Desarrollador de software",
+    "projectButton": "Ver proyecto",
+    "projectEmpty": "No hay proyectos para mostrar en este momento."
   },
   "en": {
     "aboutMeTitle": "About Me",
@@ -19,6 +21,8 @@
     "contactTitle": "Contact",
     "contactEmail": "Email",
     "github": "GitHub",
-    "subtitle": "Software Developer"
+    "subtitle": "Software Developer",
+    "projectButton": "View project",
+    "projectEmpty": "No projects to display at the moment."
   }
 }

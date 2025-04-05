@@ -1,0 +1,35 @@
+[
+  {
+    "titulo": {
+      "es": "Gestor de tareas",
+      "en": "Task Manager"
+    },
+    "descripcion": {
+      "es": "App web para gestionar tareas con drag-and-drop.",
+      "en": "Web app to manage tasks with drag-and-drop."
+    },
+    "url": "https://github.com/LeonelChagoya/gestor-tareas"
+  },
+  {
+    "titulo": {
+      "es": "Portafolio personal",
+      "en": "Personal Portfolio"
+    },
+    "descripcion": {
+      "es": "Mi sitio personal con secciones animadas.",
+      "en": "My personal site with animated sections."
+    },
+    "url": "https://leonelchagoya.github.io/portafolioLeonelV/"
+  },
+  {
+    "titulo": {
+      "es": "Dashboard analítico",
+      "en": "Analytics Dashboard"
+    },
+    "descripcion": {
+      "es": "Visualización de datos con gráficos interactivos.",
+      "en": "Interactive data visualization dashboard."
+    },
+    "url": "#"
+  }
+]
