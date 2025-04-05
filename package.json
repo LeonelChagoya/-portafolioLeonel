@@ -1,0 +1,25 @@
+{
+  "name": "portafolioleonel",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server --entry-file=index.html --port=8080"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeonelChagoya/-portafolioLeonel.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeonelChagoya/-portafolioLeonel/issues"
+  },
+  "homepage": "https://github.com/LeonelChagoya/-portafolioLeonel#readme",
+  "description": "",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.2"
+  }
+}

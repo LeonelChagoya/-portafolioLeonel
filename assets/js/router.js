@@ -7,10 +7,10 @@ import { GetSkills } from './domain/GetSkills.js';
 
 export const routes = {
     '/': async () => renderAboutMeSection(),
-    '/habilidades': async () => {
+    '/abilities': async () => {
         const skills = await GetSkills();
         return renderSkillsSection(skills);
     },
-    '/proyectos': async () => renderProjectsSection(),
-    '/contacto': async () => renderContactSection()
+    '/projects': async () => renderProjectsSection(),
+    '/contact': async () => renderContactSection()
 };

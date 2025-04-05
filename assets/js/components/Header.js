@@ -7,10 +7,9 @@ export function renderHeader() {
       <p>${t('subtitle')}</p>
       <nav>
         <a href="/" data-link>${t('aboutMeTitle')}</a>
-<a href="/habilidades" data-link>${t('skillsTitle')}</a>
-<a href="/proyectos" data-link>${t('projectsTitle')}</a>
-<a href="/contacto" data-link>${t('contactTitle')}</a>
-
+        <a href="/abilities" data-link>${t('skillsTitle')}</a>
+        <a href="/projects" data-link>${t('projectsTitle')}</a>
+        <a href="/contact" data-link>${t('contactTitle')}</a>
         <select id="lang-switcher">
           <option value="es" ${getCurrentLang() === 'es' ? 'selected' : ''}>ES</option>
           <option value="en" ${getCurrentLang() === 'en' ? 'selected' : ''}>EN</option>
