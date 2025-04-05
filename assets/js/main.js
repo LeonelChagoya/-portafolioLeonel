@@ -1,4 +1,3 @@
-
 import { routes } from './router.js';
 import { renderHeader } from './components/Header.js';
 import { renderFooter } from './components/Footer.js';
@@ -6,11 +5,23 @@ import { loadTranslations, changeLang } from './data/translationsRepository.js';
 
 async function navigate(path) {
     const main = document.querySelector('main');
-    if (!routes[path]) {
-        main.innerHTML = '<h2>404 - Página no encontrada</h2>';
-        return;
-    }
-    main.innerHTML = await routes[path]();
+
+
+    main.classList.add('fade-out');
+
+
+    await new Promise(resolve => setTimeout(resolve, 300));
+
+
+    main.innerHTML = await routes[path]?.() || '<h2>404 - Página no encontrada</h2>';
+
+    main.classList.remove('fade-out');
+    main.classList.add('fade-in');
+
+
+    setTimeout(() => {
+        main.classList.remove('fade-in');
+    }, 300);
 }
 
 function setupNavLinks() {
@@ -41,7 +52,6 @@ async function renderApp() {
         renderApp();
     });
 }
-
 
 window.addEventListener('popstate', () => {
     navigate(location.pathname);
