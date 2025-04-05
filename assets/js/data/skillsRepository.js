@@ -4,7 +4,7 @@ export async function getSkillsFromJson() {
     const basePath = window.location.href.includes('https://leonelchagoya.github.io')
         ? '/-portafolioLeonel/'
         : '/';
-
+    console.log(basePath);
     const response = await fetch(`${basePath}data/skills.json`);
 
     const data = await response.json();
