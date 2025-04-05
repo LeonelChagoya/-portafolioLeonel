@@ -1,4 +1,3 @@
-
 import { renderAboutMeSection } from './components/AboutMeSection.js';
 import { renderSkillsSection } from './components/SkillsSection.js';
 import { renderProjectsSection } from './components/ProjectsSection.js';
