@@ -6,11 +6,11 @@ import { renderContactSection } from './components/ContactSection.js';
 import { GetSkills } from './domain/GetSkills.js';
 
 export const routes = {
-    '': async () => renderAboutMeSection(),
-    'abilities': async () => {
+    '/': async () => renderAboutMeSection(),
+    '/abilities': async () => {
         const skills = await GetSkills();
         return renderSkillsSection(skills);
     },
-    'projects': async () => renderProjectsSection(),
-    'contact': async () => renderContactSection()
+    '/projects': async () => renderProjectsSection(),
+    '/contact': async () => renderContactSection()
 };
