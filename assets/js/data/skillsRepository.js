@@ -2,7 +2,7 @@ import { Skill } from '../core/Skill.js';
 
 export async function getSkillsFromJson() {
     const basePath = window.location.href.includes('leonelchagoya')
-        ? '/-portafolioLeonel/'
+        ? '/portafolioLeonelV/'
         : '/';
     console.log(window.location.href.includes('abi'));
     const response = await fetch(`${basePath}data/skills.json`);
