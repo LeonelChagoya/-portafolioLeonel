@@ -7,7 +7,6 @@ export async function renderProjectsSection() {
     const cards = proyectos.length > 0
         ? proyectos.map(p => ProjectCard(p)).join('')
         : `<p>${t('projectEmpty')}</p>`;
-
     return `
     <section id="projects">
       <h2>${t('projectsTitle')}</h2>

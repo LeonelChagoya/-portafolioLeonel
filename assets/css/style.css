@@ -81,12 +81,10 @@ select#lang-switcher {
 
 main {
     padding: 2rem 1rem;
-    max-width: 1000px;
-    margin: 0 auto;
     flex: 1;
 }
 main section {
-    max-width: 900px;
+    max-width: 1000px;
     margin: auto;
 }
 
@@ -110,12 +108,13 @@ footer {
 
 /*card project-->*/
 
-    .projects-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 1.5rem;
-        margin-top: 1.5rem;
-    }
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
 
 .project-card {
     background-color: var(--color-beige);
@@ -148,9 +147,7 @@ header h1 {
     font-size: 2rem;
 }
 
-main {
-    padding: 2rem 1rem;
-}
+
 
 /* -------------------------------------
    Tablets (>= 600px)
