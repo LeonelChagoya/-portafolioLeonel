@@ -1,0 +1,7 @@
+[
+  { "nombre": "JavaScript", "nivel": "Avanzado" },
+  { "nombre": "HTML5", "nivel": "Avanzado" },
+  { "nombre": "CSS3", "nivel": "Intermedio" },
+  { "nombre": "Vue.js", "nivel": "Intermedio" },
+  { "nombre": "Spring", "nivel": "Avanzado" }
+]

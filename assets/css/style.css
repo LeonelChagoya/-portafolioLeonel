@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #222;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav a, nav select {
+    margin: 0 1rem;
+    color: white;
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    font-size: 1rem;
+}
+
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #f5f5f5;
+}

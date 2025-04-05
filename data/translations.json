@@ -1,0 +1,24 @@
+{
+  "es": {
+    "aboutMeTitle": "Sobre mí",
+    "aboutMeText": "¡Hola! Soy desarrollador full stack apasionado por crear soluciones eficientes y funcionales.",
+    "skillsTitle": "Habilidades Técnicas",
+    "projectsTitle": "Proyectos",
+    "projectsText": "Próximamente agregaré algunos de mis mejores proyectos con capturas y enlaces.",
+    "contactTitle": "Contacto",
+    "contactEmail": "Correo",
+    "github": "GitHub",
+    "subtitle": "Desarrollador de software"
+  },
+  "en": {
+    "aboutMeTitle": "About Me",
+    "aboutMeText": "Hi! I'm a full stack developer passionate about building efficient and functional solutions.",
+    "skillsTitle": "Technical Skills",
+    "projectsTitle": "Projects",
+    "projectsText": "Soon I will add some of my best projects with screenshots and links.",
+    "contactTitle": "Contact",
+    "contactEmail": "Email",
+    "github": "GitHub",
+    "subtitle": "Software Developer"
+  }
+}
