@@ -1,12 +1,11 @@
 import { Skill } from '../core/Skill.js';
 
 export async function getSkillsFromJson() {
-    const basePath = window.location.href.includes('https://leonelchagoya.github.io')
+    const basePath = window.location.href.includes('leonelchagoya')
         ? '/-portafolioLeonel/'
         : '/';
-    console.log(basePath);
+    console.log(window.location.href.includes('abi'));
     const response = await fetch(`${basePath}data/skills.json`);
-
     const data = await response.json();
     return data.map(item => new Skill(item.nombre, item.nivel));
 }
