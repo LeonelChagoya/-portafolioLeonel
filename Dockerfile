@@ -1,8 +1,18 @@
-# Usa una imagen liviana de servidor web
+# Dockerfile para portafolio estático con HTML/CSS/JS
+# Usa una imagen ligera de NGINX como base
 FROM nginx:alpine
 
-# Copia el contenido del portafolio a la carpeta pública del servidor
-COPY .. /usr/share/nginx/html
+# Crea una carpeta dentro del contenedor para los archivos
+WORKDIR /usr/share/nginx/html
 
-# (Nginx ya sirve desde el puerto 80)
+# Elimina archivos HTML por defecto de NGINX
+RUN rm -rf ./*
 
+# Copia los archivos de tu portafolio local al contenedor
+COPY ./ ./
+
+# Expone el puerto 80 (por defecto en NGINX)
+EXPOSE 80
+
+# Usa el comando por defecto de nginx
+CMD ["nginx", "-g", "daemon off;"]
