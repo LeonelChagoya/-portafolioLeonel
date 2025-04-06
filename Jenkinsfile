@@ -1,8 +1,6 @@
 pipeline {
     agent any // Jenkins usará cualquier nodo disponible
- options {
-        githubChecks() //  para que GitHub detecte Jenkins como status check
-    }
+
     environment {
         IMAGE_NAME = "leonel-portafolio"            // Nombre de la imagen Docker a construir
         CONTAINER_NAME = "portafolio-temp"          // Nombre temporal del contenedor
