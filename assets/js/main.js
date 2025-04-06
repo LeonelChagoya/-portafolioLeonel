@@ -1,8 +1,9 @@
-
-import { routes } from './router.js';
+import { dynamicRoutes, routes } from './router.js';
 import { renderHeader } from './components/Header.js';
 import { renderFooter } from './components/Footer.js';
 import { loadTranslations, changeLang } from './data/translationsRepository.js';
+import { setupLightbox } from './interactions/lightboxHandler.js';
+import { setupProjectDetailInteractions } from './interactions/setupProjectDetailInteractions.js';
 
 function getCurrentPath() {
     return window.location.hash.replace(/^#/, '') || '/';
@@ -14,10 +15,36 @@ async function navigate(path) {
 
     await new Promise(resolve => setTimeout(resolve, 300));
 
-    main.innerHTML = await routes[path]?.() || '<h2>404 - Página no encontrada</h2>';
+    let matched = false;
+
+    if (routes[path]) {
+        main.innerHTML = await routes[path]();
+        matched = true;
+    } else {
+        for (const route of dynamicRoutes) {
+            const match = path.match(route.pattern);
+            if (match) {
+                const param = match[1];
+                main.innerHTML = await route.render(param);
+                matched = true;
+
+                // ⚡ Importante: solo si estamos en vista de proyecto
+                if (path.startsWith('/project/')) {
+                    setupProjectDetailInteractions();
+                    setupLightbox();
+                }
+
+                break;
+            }
+        }
+    }
+
+    if (!matched) {
+        main.innerHTML = '<h2>404 - Página no encontrada</h2>';
+    }
+
     main.classList.remove('fade-out');
 }
-
 
 function setupNavLinks() {
     document.querySelectorAll('a[data-link]').forEach(link => {
@@ -29,15 +56,21 @@ function setupNavLinks() {
     });
 }
 
-
 async function renderApp() {
     document.body.innerHTML = '';
 
     document.body.insertAdjacentHTML('afterbegin', renderHeader());
 
     const main = document.createElement('main');
-    main.innerHTML = await routes[getCurrentPath()]?.() || '<h2>404</h2>';
+    main.innerHTML = `
+                      <div class="loader-container">
+                        <div class="spinner"></div>
+                      </div>
+                    `;
+
     document.body.appendChild(main);
+
+    await navigate(getCurrentPath());
 
     document.body.insertAdjacentHTML('beforeend', renderFooter());
 

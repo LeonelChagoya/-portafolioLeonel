@@ -1,35 +1,72 @@
 [
   {
+    "id": "gestor-tareas",
     "titulo": {
-      "es": "Gestor de tareas",
+      "es": "Gestor de Tareas",
       "en": "Task Manager"
     },
     "descripcion": {
-      "es": "App web para gestionar tareas con drag-and-drop.",
-      "en": "Web app to manage tasks with drag-and-drop."
+      "es": "Aplicación web intuitiva para crear y organizar tareas con drag-and-drop.",
+      "en": "Intuitive web app to create and organize tasks using drag-and-drop."
     },
-    "url": "https://github.com/LeonelChagoya/gestor-tareas"
+    "rol": {
+      "es": "Desarrollador Full Stack",
+      "en": "Full Stack Developer"
+    },
+    "retos": {
+      "es": "Sincronización en tiempo real, drag-and-drop responsivo, arquitectura limpia.",
+      "en": "Real-time sync, responsive drag-and-drop, clean architecture."
+    },
+    "tecnologias": ["JavaScript", "HTML", "CSS", "LocalStorage"],
+    "url": "https://github.com/LeonelChagoya/gestor-tareas",
+    "imagenes": [
+      "assets/images/proyectos/gestor-tareas-1.png",
+      "assets/images/proyectos/gestor-tareas-2.png",
+      "assets/images/proyectos/gestor-tareas-3.png"
+    ]
   },
   {
+    "id": "portafolio_personal",
     "titulo": {
-      "es": "Portafolio personal",
+      "es": "Portafolio Personal",
       "en": "Personal Portfolio"
     },
     "descripcion": {
-      "es": "Mi sitio personal con secciones animadas.",
-      "en": "My personal site with animated sections."
+      "es": "Mi sitio personal con animaciones suaves y sección de proyectos dinámicos.",
+      "en": "My personal website with smooth animations and dynamic project section."
     },
-    "url": "https://leonelchagoya.github.io/portafolioLeonelV/"
+    "rol": {
+      "es": "Desarrollador Frontend",
+      "en": "Frontend Developer"
+    },
+    "retos": {
+      "es": "Rutas personalizadas sin framework, multilenguaje, animaciones suaves.",
+      "en": "Custom routing without a framework, multilanguage support, smooth animations."
+    },
+    "tecnologias": ["HTML", "CSS", "JavaScript", "Jenkins", "Docker"],
+    "url": "https://leonelchagoya.github.io/portafolioLeonelV/",
+    "imagenes": []
   },
   {
+    "id": "dashboard-analitico",
     "titulo": {
-      "es": "Dashboard analítico",
+      "es": "Dashboard Analítico",
       "en": "Analytics Dashboard"
     },
     "descripcion": {
-      "es": "Visualización de datos con gráficos interactivos.",
-      "en": "Interactive data visualization dashboard."
+      "es": "Panel visual para mostrar métricas clave usando gráficos interactivos.",
+      "en": "Visual dashboard to display key metrics using interactive charts."
     },
-    "url": "#"
+    "rol": {
+      "es": "Desarrollador de Visualización de Datos",
+      "en": "Data Visualization Developer"
+    },
+    "retos": {
+      "es": "Integración de datos, diseño adaptativo, rendimiento en grandes volúmenes.",
+      "en": "Data integration, responsive design, performance with large datasets."
+    },
+    "tecnologias": ["Chart.js", "HTML", "CSS", "JavaScript"],
+    "url": "#",
+    "imagenes": []
   }
 ]
