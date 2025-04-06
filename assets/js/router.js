@@ -3,6 +3,7 @@ import { renderSkillsSection } from './components/SkillsSection.js';
 import { renderProjectsSection } from './components/ProjectsSection.js';
 import { renderContactSection } from './components/ContactSection.js';
 import { GetSkills } from './domain/GetSkills.js';
+import {renderProjectDetailSection} from "./components/ProjectDetailSection.js";
 
 export const routes = {
     '/': async () => renderAboutMeSection(),
@@ -11,5 +12,14 @@ export const routes = {
         return renderSkillsSection(skills);
     },
     '/projects': async () => renderProjectsSection(),
-    '/contact': async () => renderContactSection()
+    '/contact': async () => renderContactSection(),
+
+
 };
+
+export const dynamicRoutes = [
+    {
+        pattern: /^\/project\/([^/]+)$/,
+        render: async (id) => renderProjectDetailSection(id),
+    }
+];

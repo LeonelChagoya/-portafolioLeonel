@@ -10,7 +10,8 @@
     "github": "GitHub",
     "subtitle": "Desarrollador de software",
     "projectButton": "Ver proyecto",
-    "projectEmpty": "No hay proyectos para mostrar en este momento."
+    "projectEmpty": "No hay proyectos para mostrar en este momento.",
+    "projectDefaultAlt": "Imagen del proyecto no disponible"
   },
   "en": {
     "aboutMeTitle": "About Me",
@@ -23,6 +24,7 @@
     "github": "GitHub",
     "subtitle": "Software Developer",
     "projectButton": "View project",
-    "projectEmpty": "No projects to display at the moment."
+    "projectEmpty": "No projects to display at the moment.",
+    "projectDefaultAlt": "Project image not available"
   }
 }
