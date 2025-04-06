@@ -5,7 +5,6 @@ export function renderAboutMeSection() {
     <section id="aboutMe">
       <h2>${t('aboutMeTitle')}</h2>
       <p>${t('aboutMeText')}</p>
-      <h3>Actualización de prueba para activar Jenkins CI prueba rama dev 3</h3>
     </section>
   `;
 }
