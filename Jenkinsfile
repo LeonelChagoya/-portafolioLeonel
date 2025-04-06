@@ -1,44 +1,37 @@
 pipeline {
-    agent any  // Usa cualquier agente disponible (por ahora Jenkins mismo)
+    agent any
 
     environment {
         IMAGE_NAME = "leonel-portafolio"
-        CONTAINER_NAME = "portafolio-temp"
+        CONTAINER_NAME = "portafolio-deploy"
+        PORT = "4000"
     }
 
     stages {
-        stage('Clonar Repositorio') {
+        stage('Build Docker Image') {
             steps {
-                echo 'Código ya está disponible porque usamos un volumen compartido.'
+                echo '🔨 Construyendo imagen Docker del portafolio...'
+                sh 'docker build -t $IMAGE_NAME ./portafolioLeonelV'
             }
         }
 
-        stage('Construir Imagen Docker') {
+        stage('Deploy') {
             steps {
-                echo 'Construyendo imagen Docker del portafolio...'
-                sh 'docker build -t $IMAGE_NAME .'
-            }
-        }
-
-        stage('Desplegar Contenedor') {
-            steps {
-                script {
-                    // Si ya está corriendo, lo detenemos y eliminamos
-                    sh '''
-                        docker ps -q --filter "name=$CONTAINER_NAME" | grep -q . && docker rm -f $CONTAINER_NAME || true
-                        docker run -d --name $CONTAINER_NAME -p 4000:80 $IMAGE_NAME
-                    '''
-                }
+                echo '🚀 Desplegando contenedor...'
+                sh '''
+                    docker ps -q --filter "name=$CONTAINER_NAME" | grep -q . && docker rm -f $CONTAINER_NAME || true
+                    docker run -d --name $CONTAINER_NAME -p $PORT:80 $IMAGE_NAME
+                '''
             }
         }
     }
 
     post {
         success {
-            echo '🚀 ¡Portafolio desplegado en http://localhost:4000!'
+            echo "✅ Despliegue exitoso en http://localhost:$PORT"
         }
         failure {
-            echo '❌ Algo falló durante el proceso.'
+            echo "❌ Falló el despliegue."
         }
     }
 }
