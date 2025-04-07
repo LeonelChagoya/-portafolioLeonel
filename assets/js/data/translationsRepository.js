@@ -1,8 +1,7 @@
 import { resolvePath } from '../utils/resolvePath.js';
 
 let translations = {};
-let currentLang = 'es';
-
+let currentLang = localStorage.getItem('lang') || 'es';
 export async function loadTranslations() {
     const res = await fetch(resolvePath('data/translations.json'));
     translations = await res.json();
@@ -14,6 +13,7 @@ export function t(key) {
 
 export function changeLang(lang) {
     currentLang = lang;
+    localStorage.setItem('lang', lang);
 }
 
 export function getCurrentLang() {
